@@ -1,9 +1,5 @@
 # REQUIRED PARAMETERS
 # These parameters must be supplied when consuming this module.
-variable "application_id" {
-  description = "Application Id"
-  type        = string
-}
 
 # OPTIONAL PARAMETERS
 # These parameters have reasonable defaults.
