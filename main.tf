@@ -1,10 +1,10 @@
 # Terraform state bucket
 module "state_bucket" {
-  source                     = "flagscript/flagscript-s3-bucket/aws"
-  version                    = "1.0.0"
-  bucket_name_prefix         = "terraform"
-  bucket_name_suffix         = "state"
-  use_standard_bucket_policy = false
+  source             = "flagscript/flagscript-s3-bucket/aws"
+  version            = "1.0.0"
+  bucket_name_prefix = "terraform"
+  bucket_name_suffix = "state"
+  # use_standard_bucket_policy = false
 }
 
 # Terraform state lock table
