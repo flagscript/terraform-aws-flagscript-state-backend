@@ -16,7 +16,7 @@
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_state_bucket"></a> [state\_bucket](#module\_state\_bucket) | flagscript/flagscript-s3-bucket/aws | 0.1.0 |
+| <a name="module_state_bucket"></a> [state\_bucket](#module\_state\_bucket) | flagscript/flagscript-s3-bucket/aws | 1.0.0 |
 
 ## Resources
 
@@ -28,7 +28,6 @@
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_application_id"></a> [application\_id](#input\_application\_id) | Application Id | `string` | n/a | yes |
 | <a name="input_state_lock_table_name"></a> [state\_lock\_table\_name](#input\_state\_lock\_table\_name) | Name for the dynamo state table. | `string` | `"terraform-state-lock"` | no |
 
 ## Outputs

@@ -1,8 +1,7 @@
 # Terraform state bucket
 module "state_bucket" {
   source             = "flagscript/flagscript-s3-bucket/aws"
-  version            = "0.1.0"
-  application_id     = var.application_id
+  version            = "1.0.0"
   bucket_name_prefix = "terraform"
   bucket_name_suffix = "state"
 }
@@ -16,6 +15,7 @@ resource "aws_dynamodb_table" "state_lock_table" {
   read_capacity               = 20
   write_capacity              = 20
   tags = merge(
+    local.common_tags,
     {
       Name = var.state_lock_table_name
     }
@@ -29,6 +29,6 @@ resource "aws_dynamodb_table" "state_lock_table" {
     enabled = true
   }
   server_side_encryption {
-    enabled = false # AWS Managed Key
+    enabled = true # AWS Managed Key
   }
 }
