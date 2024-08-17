@@ -13,8 +13,8 @@ resource "aws_dynamodb_table" "state_lock_table" {
   deletion_protection_enabled = true
   hash_key                    = "LockID"
   name                        = var.state_lock_table_name
-  read_capacity               = var.use_pay_per_request ? 20 : 20
-  write_capacity              = var.use_pay_per_request ? 20 : 20
+  read_capacity               = var.use_pay_per_request ? null : var.provisioned_read_capacity
+  write_capacity              = var.use_pay_per_request ? null : var.provisioned_write_capacity
   tags = merge(
     local.common_tags,
     {
