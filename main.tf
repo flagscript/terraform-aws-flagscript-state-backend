@@ -9,12 +9,12 @@ module "state_bucket" {
 
 # Terraform state lock table
 resource "aws_dynamodb_table" "state_lock_table" {
-  billing_mode                = "PROVISIONED"
+  billing_mode                = var.use_pay_per_request ? "PAY_PER_REQUEST" : "PROVISIONED"
   deletion_protection_enabled = true
   hash_key                    = "LockID"
-  name                        = var.state_lock_table_name
-  read_capacity               = 20
-  write_capacity              = 20
+  name                        = var.state_lock_table_named
+  read_capacity               = var.use_pay_per_request ? 20 : 20
+  write_capacity              = var.use_pay_per_request ? 20 : 20
   tags = merge(
     local.common_tags,
     {
