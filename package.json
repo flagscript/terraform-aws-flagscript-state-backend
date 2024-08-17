@@ -1,6 +1,6 @@
 {
   "name": "terraform-aws-flagscript-state-backend",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Module to create a terraform state bucket and lock table for the flagscript framework.",
   "main": "index.js",
   "scripts": {
