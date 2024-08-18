@@ -21,7 +21,7 @@ module "replication_bucket" {
 
 module "flagscript-s3-bucket_s3-replication" {
   providers = {
-    aws.source      = aws.state,
+    aws.source      = aws.state
     aws.destination = aws.replication
   }
   source                  = "flagscript/flagscript-s3-bucket/aws//modules/s3-replication"
