@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/flagscript/terraform-aws-flagscript-state-backend/compare/v0.4.0...v0.4.1) (2024-08-18)
+
+
+### Bug Fixes
+
+* **resolves #16:** Fix invalid provider configuration block. ([6718fa8](https://github.com/flagscript/terraform-aws-flagscript-state-backend/commit/6718fa81b704b7e34dcc1a7178b6c8e8523d0613)), closes [#16](https://github.com/flagscript/terraform-aws-flagscript-state-backend/issues/16)
+
 # [0.4.0](https://github.com/flagscript/terraform-aws-flagscript-state-backend/compare/v0.3.2...v0.4.0) (2024-08-18)
 
 
