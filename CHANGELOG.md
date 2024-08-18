@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/flagscript/terraform-aws-flagscript-state-backend/compare/v0.3.2...v0.4.0) (2024-08-18)
+
+
+### Features
+
+* **resolves #14:** Add state bucket replication. ([f28ca3c](https://github.com/flagscript/terraform-aws-flagscript-state-backend/commit/f28ca3cc122f626dedffd325f277098140203daa)), closes [#14](https://github.com/flagscript/terraform-aws-flagscript-state-backend/issues/14)
+
 ## [0.3.2](https://github.com/flagscript/terraform-aws-flagscript-state-backend/compare/v0.3.1...v0.3.2) (2024-08-18)
 
 
