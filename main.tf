@@ -24,10 +24,11 @@ module "flagscript-s3-bucket_s3-replication" {
     aws.source      = aws.state
     aws.destination = aws.replication
   }
-  source                  = "flagscript/flagscript-s3-bucket/aws//modules/s3-replication"
-  version                 = "2.3.0"
-  source_bucket_name      = module.state_bucket.bucket_name
-  destination_bucket_name = module.replication_bucket.bucket_name
+  source                   = "flagscript/flagscript-s3-bucket/aws//modules/s3-replication"
+  version                  = "2.3.0"
+  source_bucket_name       = module.state_bucket.bucket_name
+  destination_bucket_name  = module.replication_bucket.bucket_name
+  replicate_delete_markers = false
 }
 
 # Terraform state lock table
