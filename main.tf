@@ -1,14 +1,38 @@
 # Terraform state bucket
 module "state_bucket" {
+  providers = {
+    aws = aws.state
+  }
   source             = "flagscript/flagscript-s3-bucket/aws"
-  version            = "1.0.0"
+  version            = "2.3.0"
   bucket_name_prefix = "terraform"
   bucket_name_suffix = "state"
-  # use_standard_bucket_policy = false
+}
+
+module "replication_bucket" {
+  providers = {
+    aws = aws.replication
+  }
+  source             = "flagscript/flagscript-s3-bucket/aws"
+  version            = "2.3.0"
+  bucket_name_prefix = "terraform"
+  bucket_name_suffix = "state"
+}
+
+module "flagscript-s3-bucket_s3-replication" {
+  providers = {
+    aws.source      = aws.state,
+    aws.destination = aws.replication
+  }
+  source                  = "flagscript/flagscript-s3-bucket/aws//modules/s3-replication"
+  version                 = "2.3.0"
+  source_bucket_name      = module.state_bucket.bucket_name
+  destination_bucket_name = module.replication_bucket.bucket_name
 }
 
 # Terraform state lock table
 resource "aws_dynamodb_table" "state_lock_table" {
+  provider                    = aws.state
   billing_mode                = var.use_pay_per_request ? "PAY_PER_REQUEST" : "PROVISIONED"
   deletion_protection_enabled = true
   hash_key                    = "LockID"
