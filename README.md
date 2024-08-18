@@ -10,13 +10,15 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.60 |
+| <a name="provider_aws.state"></a> [aws.state](#provider\_aws.state) | >= 5.60 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_state_bucket"></a> [state\_bucket](#module\_state\_bucket) | flagscript/flagscript-s3-bucket/aws | 1.0.0 |
+| <a name="module_flagscript-s3-bucket_s3-replication"></a> [flagscript-s3-bucket\_s3-replication](#module\_flagscript-s3-bucket\_s3-replication) | flagscript/flagscript-s3-bucket/aws//modules/s3-replication | 2.3.0 |
+| <a name="module_replication_bucket"></a> [replication\_bucket](#module\_replication\_bucket) | flagscript/flagscript-s3-bucket/aws | 2.3.0 |
+| <a name="module_state_bucket"></a> [state\_bucket](#module\_state\_bucket) | flagscript/flagscript-s3-bucket/aws | 2.3.0 |
 
 ## Resources
 
