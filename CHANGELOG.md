@@ -1,3 +1,10 @@
+## [0.4.2](https://github.com/flagscript/terraform-aws-flagscript-state-backend/compare/v0.4.1...v0.4.2) (2024-08-18)
+
+
+### Bug Fixes
+
+* **resolves #18:** Disable deletion replication ([e60a2a9](https://github.com/flagscript/terraform-aws-flagscript-state-backend/commit/e60a2a957a0ee646c76cc3fa75cee5939bb19e04)), closes [#18](https://github.com/flagscript/terraform-aws-flagscript-state-backend/issues/18)
+
 ## [0.4.1](https://github.com/flagscript/terraform-aws-flagscript-state-backend/compare/v0.4.0...v0.4.1) (2024-08-18)
 
 
