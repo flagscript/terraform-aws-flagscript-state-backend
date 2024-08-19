@@ -1,3 +1,10 @@
+## [0.4.3](https://github.com/flagscript/terraform-aws-flagscript-state-backend/compare/v0.4.2...v0.4.3) (2024-08-19)
+
+
+### Bug Fixes
+
+* **resolves #18:** Bump s3 version ([68e5158](https://github.com/flagscript/terraform-aws-flagscript-state-backend/commit/68e51580aaf7accc23204ee462d1f5bf268199f4)), closes [#18](https://github.com/flagscript/terraform-aws-flagscript-state-backend/issues/18)
+
 ## [0.4.2](https://github.com/flagscript/terraform-aws-flagscript-state-backend/compare/v0.4.1...v0.4.2) (2024-08-18)
 
 
